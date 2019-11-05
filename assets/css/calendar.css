@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0 0 0;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.25rem;
+  background-color: #fcfcfc;
+}
+
+.calendar {
+  width: 56%;
+  min-height: 280px;
+  margin: 5px auto 0 auto;
+  padding: 4px 0 0 0;
+  background-color: #ffffff;
+  border: 1px solid #e9e7e7;
+  border-radius: 2px;
+}
+
+.calendar-header {
+  width: 100%;
+  min-height: 35px;
+  padding: 12px 0 0 0;
+  color: #555555;
+}
+.calendar-header h1 {
+  display: inline-block;
+  margin: 0 2px;
+  text-align: center;
+  font-size: 2.55rem;
+  font-weight: 700;
+  line-height: 39px;
+}
+.calendar-header i {
+  font-size: 2.4rem;
+  line-height: 41px;
+  cursor: pointer;
+}
+
+.header-top {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  padding-top: 6px 0 2px 0;
+}
+
+.top-left,
+.top-center,
+.top-right {
+  float: left;
+}
+
+.top-left {
+  width: 15%;
+  padding: 0 0 0 14px;
+  text-align: left;
+}
+
+.top-center {
+  width: 70%;
+  text-align: center;
+}
+
+.top-right {
+  width: 15%;
+  padding: 0 14px 0 0;
+  text-align: right;
+}
+
+.header-bottom {
+  width: 100%;
+  height: 37px;
+  padding: 2px 0;
+  background-color: #e9e7e7;
+}
+
+.week {
+  overflow: hidden;
+  width: 100%;
+}
+
+.weekday {
+  float: left;
+  width: 14.2857142857%;
+  color: #555555;
+  text-align: center;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: 0.0175rem;
+  line-height: 33px;
+}
+
+.calendar-body {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.day {
+  float: left;
+  width: 14.2857142857%;
+  height: 60px;
+  margin: 0 !important;
+  padding: 9px 12px 0 0;
+  color: #555555;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-right: 1px solid #e9e7e7;
+  border-bottom: 1px solid #e9e7e7;
+}
+.day:nth-of-type(7), .day:nth-of-type(14), .day:nth-of-type(21), .day:nth-of-type(28), .day:nth-of-type(35), .day:nth-of-type(42), .day:nth-of-type(49) {
+  border-right: none;
+}
+.day:nth-of-type(36), .day:nth-of-type(37), .day:nth-of-type(38), .day:nth-of-type(39), .day:nth-of-type(40), .day:nth-of-type(41), .day:nth-of-type(42) {
+  border-bottom: none;
+}
+
+.outer-day {
+  color: #c4c2c2;
+}
+
+.today {
+  background-color: #e7e6e6;
+  color: #111111;
+  border: none;
+}
+
+/*# sourceMappingURL=calendar.css.map */

@@ -1,0 +1,156 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: $max;
+  height: $max;
+  font-size: 62.5%;
+}
+
+body {
+  width: $max;
+  height: $max;
+  padding: 15px 0 0 0;
+  font-family: $font1;
+  font-size: 1.25rem;
+  background-color: #fcfcfc;
+}
+
+.calendar {
+  width: $max * 0.56;
+  min-height: 280px;
+  margin: 5px auto 0 auto;
+  padding: 4px 0 0 0;
+  background-color: #ffffff;
+  border: 1px solid $color2;
+  border-radius: 2px;
+}
+
+.calendar-header {
+  width: $max;
+  min-height: 35px;
+  padding: 12px 0 0 0;
+  color: $color1;
+  
+  h1 {
+    display: inline-block;
+    margin: 0 2px;
+    text-align: center;
+    font-size: 2.55rem;
+    font-weight: 700;
+    line-height: 39px;
+  }
+  i {
+    font-size: 2.4rem;
+    line-height: 41px;
+    cursor: pointer;
+  }
+}
+
+.header-top {
+  overflow: hidden;
+  width: $max;
+  height: auto;
+  margin-bottom: 12px;
+  padding-top: 6px 0 2px 0;
+}
+
+.top-left,
+.top-center,
+.top-right {
+  float: left;
+}
+
+.top-left {
+  width: $max * 0.15;
+  padding: 0 0 0 14px;
+  text-align: left;
+}
+
+.top-center {
+  width: $max * 0.70;
+  text-align: center;
+}
+
+.top-right {
+  width: $max * 0.15;
+  padding: 0 14px 0 0;
+  text-align: right;
+}
+
+.header-bottom {
+  width: $max;
+  height: 37px;
+  padding: 2px 0;
+  background-color: $color2;
+  //border-radius: 3px;
+}
+
+.week {
+  overflow: hidden;
+  width: $max;
+}
+
+.weekday {
+  float: left;
+  width: $max / 7;
+  color: $color1;
+  text-align: center;
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: 0.0175rem;
+  line-height: 33px;
+}
+
+.calendar-body {
+  overflow: hidden;
+  width: $max;
+  height: auto;
+}
+
+.day {
+  float: left;
+  width: $max / 7;
+  height: 60px;
+  margin: 0 !important;
+  padding: 9px 12px 0 0;
+  color: $color1;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-right: 1px solid $color2;
+  border-bottom: 1px solid $color2;
+  &:nth-of-type(7),
+  &:nth-of-type(14),
+  &:nth-of-type(21),
+  &:nth-of-type(28),
+  &:nth-of-type(35),
+  &:nth-of-type(42),
+  &:nth-of-type(49) {
+    border-right: none;
+  }
+  &:nth-of-type(36),
+  &:nth-of-type(37),
+  &:nth-of-type(38),
+  &:nth-of-type(39),
+  &:nth-of-type(40),
+  &:nth-of-type(41),
+  &:nth-of-type(42) {
+    border-bottom: none;
+  }
+}
+
+.outer-day {
+  color: #c4c2c2;
+}
+
+.today {
+  background-color: #e7e6e6;
+  color: #111111;
+  border: none;
+}
