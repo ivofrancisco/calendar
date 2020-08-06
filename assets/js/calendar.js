@@ -30,7 +30,7 @@ class Calendar {
         return [monthTotal, monthIndex, year, ref];
     }
 
-    // Converts a given number into an array of objects.
+    // Converts a total number of given month into an array of objects.
     // Each objects will store: day number, the month index(index and ref), the date's index 
     // and the date in a dateToLocaleString method format
     createMonth(date, index) {
@@ -48,7 +48,7 @@ class Calendar {
             created["month"] = month;
             created["year"] = this.getData(date, index)[2];
             // Zero is removed of added to match dateToLocaleString method format
-            created["date"] = `${this.toggleZero(index)}/${this.toggleZero(month)}/${this.getData(date, index)[2]}`;
+            created["date"] = `${this.toggleZero(i)}/${this.toggleZero(month)}/${this.getData(date, index)[2]}`;
             myArr.push(created);
             i++;
         }
@@ -69,7 +69,7 @@ class Calendar {
     // Generates and returns HTML for each day 
     generateHtml(days, wrapper) {
         days.forEach(item => {
-            const html = `<div data-date="${item.date}" class="${(item.ref !== 1) ? "day outer-day" : "day"} ${this.highLight(item.date, this.currentDate)}">${item.number}</div>`;
+            const html = `<div data-date="${item.date}" class="${(item.ref !== 1) ? "day outer-day" : "day"} ${this.highLight(item.date)}">${item.number}</div>`;
             wrapper.innerHTML += html;
         });
     }
@@ -103,8 +103,9 @@ class Calendar {
     }
 
     // Adding active state to day HTML element based on it's data-date attribute
-    highLight(item, date) {
-        return (item === date.toLocaleDateString()) ? " today" : "";
+    highLight(item) {
+        const date = new Date().toLocaleDateString();
+        return (item === date) ? " today" : "";
     }
 
     // Move from a date to another adding or decreasing month's index
@@ -113,7 +114,6 @@ class Calendar {
         // Updating days in a calendar
         this.displayDays(wrapper);
     }
-
 }
 
 // Calendar container element
